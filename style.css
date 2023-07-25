@@ -1,16 +1,20 @@
 :root {
-	--aside-w: 300px;
-	--content-w: 550px;
-	--b-radius: 2px;
+  /* sizes */
+	--aside-w: 300px;                             /* aside width */
+	--content-w: 550px;                           /* content width */
+	--b-radius: 2px;                              /* border radius */
 
+  /* fonts */
 	/* 62.5% of default browser 16px = 10px ... when writing rem sizes this means we write 2.6rem to represent 26px fonts, 1.3 for 13px, .5 for 5px, etc */
 	font-size: 62.5%;
 	--primary-font: 1.7rem /1.4 "Inter", Helvetica, system-ui, sans-serif;
+	--f-light-color: rgb(215, 206, 163);        /* font light color */
+  --fa-visited: rgb(179, 179, 179);           /* visited a tag color */
 
 	/* colors */
-	--bg-primary: rgb(66, 82, 61);
-	--bg-dark: rgb(50, 68, 49);
-	--f-light-color: rgb(215, 206, 163);
+	--bg-primary: rgb(66, 82, 61);              /* background primary */
+	--bg-dark: rgb(50, 68, 49);                 /* background dark */
+  --b-light-color: rgb(215, 206, 163, 0.2);   /* border light color */
 }
 
 * {
@@ -47,6 +51,28 @@ h3 {
 	font-size: 2rem;
 }
 
+a {
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--fa-visited) !important;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+svg {
+  width: 32px;
+  height: 32px;
+  stroke-width: 1.5;
+  stroke: var(--f-light-color);
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  fill: none;
+}
+
 /******************************************
 /* ASIDE
 /*******************************************/
@@ -57,21 +83,22 @@ aside {
 
 #info-card > h1 {
 	text-align: center;
+  border-bottom: 1px solid var(--b-light-color);
 }
 
 #info-card,
-#creds {
+#aside-two {
 	width: var(--aside-w);
 }
 
 /* right article, keep the credits at bottom right of screen */
-#creds {
+#aside-two {
 	position: sticky;
 	height: 100vh;
 	font-size: 1.2rem;
 }
 
-#creds > section.credit {
+#aside-two > .credit {
 	position: sticky;
 	top: 100vh;
 	margin: 0 0 8px 0;
@@ -89,7 +116,7 @@ section {
 	margin: 30px 0;
 	background-color: var(--bg-dark);
 	border-radius: var(--b-radius);
-	box-shadow: 0 0 2px rgb(215, 206, 163, 0.2);
+	box-shadow: 0 0 2px var(--b-light-color);
 }
 
 section > h2 {
@@ -111,16 +138,56 @@ section > .bubble {
 /* SKILLS
 /*******************************************/
 
-.skills {
+#skills {
 	text-align: center;
 }
 
-.skills > .bubble > h3 {
+#skills > .bubble > h3 {
 	text-transform: uppercase;
 	margin: 25px 0 10px 0;
 }
 
-.skills > .bubble > h3 > span {
+#skills > .bubble > h3 > span {
 	color: var(--bg-dark);
 	text-decoration: underline dotted;
+}
+
+/******************************************
+/* CONTACT
+/*******************************************/
+
+#aside-two > #contact > h2 {
+  text-align: center;
+  margin: 0;
+  border-bottom: 1px solid var(--b-light-color);
+}
+
+/* make svg and a tags align */
+#aside-two > #contact > nav > ul > li {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  margin-left: 10px;
+  padding: 4px 0;
+}
+
+#aside-two > #contact > nav > ul > li > a {
+  font-size: 1.6rem;
+  color: var(--f-light-color);
+}
+
+/******************************************
+/* CREDIT
+/*******************************************/
+
+aside > .credit {
+  background-color: var(--bg-primary);
+  box-shadow: none;
+  border-bottom: var(--f-light-color);
+  text-align: center;
+}
+
+aside > .credit > a {
+  margin: 0 15px;
+  color: var(--fa-visited);
 }
