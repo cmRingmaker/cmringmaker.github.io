@@ -1,7 +1,9 @@
 :root {
   /* sizes */
 	--aside-w: 300px;                             /* aside width */
+	--aside-query: 250px;													/* media query aside */
 	--content-w: 550px;                           /* content width */
+	--content-query: 450px;												/* content query*/
 	--b-radius: 2px;                              /* border radius */
 
   /* fonts */
@@ -190,4 +192,37 @@ aside > .credit {
 aside > .credit > a {
   margin: 0 15px;
   color: var(--fa-visited);
+}
+
+/******************************************
+/* MEDIA QUERIES
+/*******************************************/
+
+@media screen and (max-width: 1200px){
+	#info-card,
+	#aside-two {
+		width: var(--aside-query);
+	}
+
+	main {
+		width: var(--content-query);
+	}
+
+	#aside-two > #contact > nav > ul > li > a {
+		font-size: 1.4rem;
+	}
+
+	svg {
+		width: 28px;
+		height: 28px;
+		stroke-width: 1.5;
+		stroke: var(--f-light-color);
+		stroke-linecap: round;
+		stroke-linejoin: round;
+		fill: none;
+	}
+
+	.container {
+		gap: 10px;
+	}
 }
