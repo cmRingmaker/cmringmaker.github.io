@@ -226,3 +226,39 @@ aside > .credit > a {
 		gap: 10px;
 	}
 }
+
+@media screen and (max-width: 1000px){
+
+	.container {
+		flex-direction: column;
+		align-items: center;
+		gap: 0;
+	}
+
+	aside {
+		position: relative;
+	}
+
+	#info-card,
+	#aside-two,
+	main {
+		width: var(--content-w);
+		margin-bottom: 0;
+	}
+
+	#aside-two {
+		position: relative;
+		height: 100%;
+	}
+
+	#aside-two > #contact {
+		margin-top: 0;
+	}
+
+	#aside-two > .credit {
+		top: 0;
+		margin-bottom: 20px;
+	}
+
+
+}
