@@ -262,3 +262,15 @@ aside > .credit > a {
 
 
 }
+
+@media screen and (max-width: 580px){
+	main,
+	aside,
+	#aside-two {
+		width: 94%;
+	}
+
+	#info-card {
+		width: 100%;
+	}
+}
