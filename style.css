@@ -88,6 +88,10 @@ aside {
   border-bottom: 1px solid var(--b-light-color);
 }
 
+.bio > p {
+	padding: 10px 0 10px 30px;
+}
+
 #info-card,
 #aside-two {
 	width: var(--aside-w);
