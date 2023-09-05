@@ -43,7 +43,8 @@ body {
 }
 
 h1,
-h2 {
+h2,
+h3 {
 	font-size: 3rem;
 	text-transform: uppercase;
 	padding: 10px 0;
@@ -51,6 +52,7 @@ h2 {
 
 h3 {
 	font-size: 2rem;
+	padding: 0;
 }
 
 a {
@@ -149,13 +151,36 @@ section > .bubble {
 }
 
 #skills > .bubble > h3 {
-	text-transform: uppercase;
 	margin: 25px 0 10px 0;
 }
 
 #skills > .bubble > h3 > span {
 	color: var(--bg-dark);
 	text-decoration: underline dotted;
+}
+
+/******************************************
+/* PROJECTS
+/*******************************************/
+
+#projects > .bubble > img {
+	width: 100%;
+}
+
+#projects > .bubble > h3,
+#projects > .bubble > span {
+	display: block;
+	text-align: center;
+	margin: 2px 0;
+}
+
+#projects a {
+	text-transform: uppercase;
+	font-weight: 600;
+}
+
+#projects a:visited {
+	color: var(--bg-primary) !important;
 }
 
 /******************************************
